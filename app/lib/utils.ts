@@ -18,3 +18,9 @@ export function formatSize(bytes: number): string {
 	const gb = mb / 1024;
 	return `${gb.toFixed(1)} GB`;
 }
+
+/**
+ * crypto.randomUUID() is a native browser method used to generate a universally unique
+ * identifier (UUID) without needing external libraries
+ */
+export const generateUUID = () => crypto.randomUUID();
